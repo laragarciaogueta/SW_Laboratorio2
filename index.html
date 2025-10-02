@@ -68,16 +68,21 @@
 		<input type="button" value="Go" />
 	</form>
   <script>
-    //referencia al select
-    const combo = document.getElementById("combobox");
-    //escuchamos el evento change
-    combo.addEventListener("change", function() {
-        //obtenemos el valor seleccionado
-        const selectedRecipe = combo.options[combo.selectedIndex].text;
-        //mostramos en la consola la receta seleccionada
-        console.log("Receta seleccionada: " + selectedRecipe);
-        alert("You have selected the recipe: " + selectedRecipe);
-  </script>
+  // Referencia al select
+  const combo = document.getElementById("combobox");
+
+  // Escuchamos el evento "change"
+  combo.addEventListener("change", function () {
+    // Obtenemos el texto de la opción seleccionada
+    const selectedRecipe = combo.options[combo.selectedIndex].text;
+
+    // Mostramos en la consola la receta seleccionada
+    console.log("Receta seleccionada: " + selectedRecipe);
+
+    // También mostramos un alert
+    alert("You have selected the recipe: " + selectedRecipe);
+  });
+</script>
       </div>
  </aside>
     <details>
