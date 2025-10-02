@@ -35,6 +35,27 @@
   <br /><input type="submit" value="Login" />
   </div>
 </form>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("form");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault(); // Evita el envío real del formulario
+
+      alert("El botón Login ha sido pulsado ✅");
+
+      const username = document.getElementById("user").value;
+      const password = document.getElementById("pass").value;
+
+      // Validación
+      if (username.includes("@ehu.eus") && password.length >= 4) {
+        alert("Bienvenido " + username);
+      } else {
+        alert("Error: Usuario o contraseña no válidos.");
+      }
+    });
+  });
+</script>
 <h3>Join All the recipes </h3><p>In the news for you</p>
 <div class="readbutton"><a href="#">Join Now</a></div>
   </div>
