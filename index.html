@@ -36,18 +36,20 @@
   </div>
 </form>
 <script>
+
+  //boton login mensajes
   document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("form");
 
     form.addEventListener("submit", function (event) {
       event.preventDefault(); // Evita el envío real del formulario
 
-      alert("El botón Login ha sido pulsado ✅");
+      alert("El botón Login ha sido pulsado");
 
       const username = document.getElementById("user").value;
       const password = document.getElementById("pass").value;
 
-      // Validación
+      // Validación de usuario y contraseña
       if (username.includes("@ehu.eus") && password.length >= 4) {
         alert("Bienvenido " + username);
       } else {
