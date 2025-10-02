@@ -89,8 +89,12 @@
       // Mostramos en la consola la receta seleccionada
       console.log("Receta seleccionada: " + selectedRecipe);
 
-      // También mostramos un alert
-      alert("You have selected the recipe: " + selectedRecipe);
+      //Condicion pizza con piña
+      if (selectedValue === "pizzaMala") {
+          alert("Pizza con piña… Non sei il benvenuto in Italia 🤌");
+        } else {
+          alert("You have selected the recipe: " + selectedRecipe);
+        }
     });
   });
 </script>
