@@ -67,37 +67,34 @@
 		</select>
 		<input type="button" value="Go" />
 	</form>
-  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // Referencia al select
-    const combo = document.getElementById("combobox");
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Referencia al select
+      const combo = document.getElementById("combobox");
 
-    // Crear una nueva opción
-    const newOption = document.createElement("option");
-    newOption.className = "_self";
-    newOption.value = "pizzaMala";
-    newOption.text = "Pineapple Pizza";
+      // Crear nueva opción "Pineapple Pizza"
+      const newOption = document.createElement("option");
+      newOption.className = "_self";
+      newOption.value = "pizzaMala";
+      newOption.text = "Pineapple Pizza";
+      combo.appendChild(newOption); // la añadimos al final
 
-    // Añadir la opción al select (al final)
-    combo.appendChild(newOption);
+      // Escuchamos el evento change
+      combo.addEventListener("change", function () {
+        const selectedRecipe = combo.options[combo.selectedIndex].text;
+        const selectedValue = combo.value;
 
-    // Escuchamos el evento "change"
-    combo.addEventListener("change", function () {
-      // Obtenemos el texto de la opción seleccionada
-      const selectedRecipe = combo.options[combo.selectedIndex].text;
+        console.log("Receta seleccionada: " + selectedRecipe);
 
-      // Mostramos en la consola la receta seleccionada
-      console.log("Receta seleccionada: " + selectedRecipe);
-
-      //Condicion pizza con piña
-      if (selectedValue === "pizzaMala") {
+        // Condición especial para la pizza con piña
+        if (selectedValue === "pizzaMala") {
           alert("Pizza con piña… Non sei il benvenuto in Italia 🤌");
         } else {
           alert("You have selected the recipe: " + selectedRecipe);
         }
+      });
     });
-  });
-</script>
+  </script>
 
       </div>
  </aside>
