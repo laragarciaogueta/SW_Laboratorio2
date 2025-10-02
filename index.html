@@ -71,6 +71,12 @@
   // Referencia al select
   const combo = document.getElementById("combobox");
 
+  // Crear una nueva opción
+   const newOption = document.createElement("option");
+    newOption.className = "_self";
+    newOption.value = "pizzaMala";
+    newOption.text = "Pineapple Pizza";
+    
   // Escuchamos el evento "change"
   combo.addEventListener("change", function () {
     // Obtenemos el texto de la opción seleccionada
