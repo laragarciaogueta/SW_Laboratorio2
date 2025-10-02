@@ -68,27 +68,33 @@
 		<input type="button" value="Go" />
 	</form>
   <script>
-  // Referencia al select
-  const combo = document.getElementById("combobox");
+  document.addEventListener("DOMContentLoaded", function () {
+    // Referencia al select
+    const combo = document.getElementById("combobox");
 
-  // Crear una nueva opción
-   const newOption = document.createElement("option");
+    // Crear una nueva opción
+    const newOption = document.createElement("option");
     newOption.className = "_self";
     newOption.value = "pizzaMala";
     newOption.text = "Pineapple Pizza";
-    
-  // Escuchamos el evento "change"
-  combo.addEventListener("change", function () {
-    // Obtenemos el texto de la opción seleccionada
-    const selectedRecipe = combo.options[combo.selectedIndex].text;
 
-    // Mostramos en la consola la receta seleccionada
-    console.log("Receta seleccionada: " + selectedRecipe);
+    // Añadir la opción al select (al final)
+    combo.appendChild(newOption);
 
-    // También mostramos un alert
-    alert("You have selected the recipe: " + selectedRecipe);
+    // Escuchamos el evento "change"
+    combo.addEventListener("change", function () {
+      // Obtenemos el texto de la opción seleccionada
+      const selectedRecipe = combo.options[combo.selectedIndex].text;
+
+      // Mostramos en la consola la receta seleccionada
+      console.log("Receta seleccionada: " + selectedRecipe);
+
+      // También mostramos un alert
+      alert("You have selected the recipe: " + selectedRecipe);
+    });
   });
 </script>
+
       </div>
  </aside>
     <details>
